@@ -10,6 +10,12 @@ jobs:
         with:
           path: docs
 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: data
+
       - name: build Documentation
         run: |
           cd docs
