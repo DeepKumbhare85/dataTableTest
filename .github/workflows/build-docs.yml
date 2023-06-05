@@ -12,10 +12,11 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
 
       - name: build Documentation
         run: |
+          ls
           cd docs
           yarn 
           yarn build
