@@ -8,18 +8,15 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v3
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: docs/.vitepress/dist/
-
       - name: build Documentation
         run: |
           ls
           cd docs
           yarn
           yarn docs:build
-          pwd
-          ls 
-          cd .vitepress
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: docs/.vitepress/dist/
