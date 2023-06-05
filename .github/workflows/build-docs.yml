@@ -7,8 +7,6 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v3
-        with:
-          path: docs
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
