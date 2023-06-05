@@ -12,7 +12,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: docs/.vitepress/dist/*
+          path: docs/.vitepress/dist/
 
       - name: build Documentation
         run: |
