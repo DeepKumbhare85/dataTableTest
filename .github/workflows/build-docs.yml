@@ -21,3 +21,5 @@ jobs:
           yarn
           yarn docs:build
           pwd
+          ls 
+          cd .vitepress
