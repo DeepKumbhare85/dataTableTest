@@ -6,7 +6,9 @@ jobs:
     name: Build Docs
     steps:
       - name: ⚙️ Set BRAND_NAME environment variable from repo name
-        run: echo BRAND_NAME=${{ github.event.repository.name }} | cut -d '-' -f1 >> $GITHUB_ENV
+        run:
+          echo BRAND_NAME=${{ github.event.repository.name }} | cut -d '-' -f1 >> $GITHUB_ENV
+          echo ${{ env.BRAND_NAME }}
 
       - name: checkout repository
         uses: actions/checkout@v3
