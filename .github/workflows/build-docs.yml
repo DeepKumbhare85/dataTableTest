@@ -1,0 +1,12 @@
+name: build docs
+on: [workflow_dispatch]
+jobs:
+  build_docs:
+    runs-on: ubuntu-latest
+    name: Build Docs
+    steps:
+      - name: ⚙️ Set BRAND_NAME environment variable from repo name
+        run: echo BRAND_NAME=${{ github.event.repository.name }} | cut -d '-' -f1 >> $GITHUB_ENV
+
+      - name: checkout repository
+        uses: actions/checkout@v3
