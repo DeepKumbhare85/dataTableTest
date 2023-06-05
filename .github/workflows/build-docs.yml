@@ -15,6 +15,8 @@ jobs:
 
       - name: build Documentation
         run: |
+          echo pwd
+          echo ls
           cd ${{env.BRAND_NAME}}/docs
           yarn 
           yarn build
