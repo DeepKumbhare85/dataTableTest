@@ -18,4 +18,4 @@ jobs:
           cd docs
           yarn 
           yarn build
-          ls
+          cd dist
