@@ -15,8 +15,6 @@ jobs:
 
       - name: build Documentation
         run: |
-          pwd
-          ls
-          cd ${{env.BRAND_NAME}}/docs
+          cd docs
           yarn 
           yarn build
