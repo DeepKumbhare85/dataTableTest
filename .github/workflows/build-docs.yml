@@ -10,7 +10,6 @@ jobs:
 
       - name: build Documentation
         run: |
-          ls
           cd docs
           yarn
           yarn docs:build
